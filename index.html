@@ -2,7 +2,10 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Thể tích vật thể tròn xoay - Phương pháp Đĩa</title>
     <style>
       * {
@@ -185,6 +188,86 @@
       .disk-info span {
         color: #ffdd00;
         font-weight: bold;
+      }
+
+      /* ========== MOBILE RESPONSIVE ========== */
+      @media (max-width: 900px) {
+        body {
+          overflow: auto;
+          height: auto;
+        }
+        .container {
+          flex-direction: column;
+          height: auto;
+          min-height: 100vh;
+        }
+        .sidebar {
+          width: 100%;
+          min-width: unset;
+          border-right: none;
+          border-bottom: 2px solid #0f3460;
+          padding: 10px 12px;
+        }
+        .main-view {
+          width: 100%;
+        }
+        .top-area {
+          flex-direction: column;
+        }
+        #container3d {
+          width: 100%;
+          height: 50vh;
+          min-height: 280px;
+        }
+        .graph-panel {
+          width: 100%;
+          min-width: unset;
+          height: 320px;
+          border-left: none;
+          border-top: 2px solid #0f3460;
+        }
+        .slider-group input[type="range"] {
+          height: 10px;
+        }
+        .btn {
+          padding: 8px 14px;
+          font-size: 14px;
+        }
+        .sidebar h2 {
+          font-size: 18px;
+        }
+        .help {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sidebar {
+          padding: 8px;
+        }
+        .sidebar h2 {
+          font-size: 16px;
+        }
+        #container3d {
+          height: 45vh;
+          min-height: 240px;
+        }
+        .graph-panel {
+          height: 260px;
+        }
+        .info-box p {
+          font-size: 12px;
+        }
+        .formula {
+          font-size: 14px;
+          padding: 6px;
+        }
+        .note {
+          font-size: 11px;
+        }
+        .btn-row {
+          justify-content: center;
+        }
       }
     </style>
   </head>
